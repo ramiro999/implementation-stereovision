@@ -6,4 +6,5 @@ import os
 class DepthMap:
     def __init__(self, showImages):
         # Load the images
-        self.imgL = cv.imread('left.jpg', 0)
+        root = os.getcwd()
+        imgLeftPath = os.path.join(root, '/')
