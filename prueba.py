@@ -49,4 +49,21 @@ class DepthMap:
         plt.imshow(diparity, 'gray')
         plt.colorbar()
         plt.show()
+
+
+    def demoViewPics():
+        dp = DepthMap(showImages=True)
+
+    def demoStereoBM():
+        dp = DepthMap(showImages=False)
+        dp.computeDepthMapBM()
+
+    def demoStereoSGBM():
+        dp = DepthMap(showImages=False)
+        dp.computeDepthMapSGBM()
+    
+    if __name__ == "__main__":
+        demoViewPics()
+        # demoStereoBM()
+        # demoStereoSGBM()
         
