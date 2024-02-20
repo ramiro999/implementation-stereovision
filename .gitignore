@@ -1,1 +1,15 @@
+# Ignore virtual environment
 myenv/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore IDE settings (uncomment as needed)
+# .vscode/
+# .idea/
+
+# Ignore other unnecessary files
+.DS_Store    # macOS folder attribute files
+Thumbs.db    # Windows image file cache
+*.log        # Log files
