@@ -1,8 +1,8 @@
 ## Create Virtual Environment 
 
 ```
-python -m venv opencvEnv
-.\opencvEnv\Scripts\activate
+python3 -m venv myenv
+.\myenv\Scripts\activate
 pip install -r requirements.txt
 ```
 
