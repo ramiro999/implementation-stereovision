@@ -7,8 +7,8 @@ class DepthMap:
     def __init__(self, showImages):
         # Load the images
         root = os.getcwd()
-        imgLeftPath = os.path.join(root, '/images/motorcycle/im0.png')
-        imgRightPath = os.path.join(root, '/images/motorcycle/im1.png')
+        imgLeftPath = os.path.join(root, 'Images/motorcycle/im0.png')
+        imgRightPath = os.path.join(root, 'Images/motorcycle/im1.png')
         self.imgLeft = cv.imread(imgLeftPath, cv.IMREAD_GRAYSCALE)
         self.imgRight = cv.imread(imgRightPath, cv.IMREAD_GRAYSCALE)
 
@@ -24,10 +24,10 @@ class DepthMap:
         nDipsFactor = 6 #adjust this value to get better results
         stereo = cv.StereoBM.create(numDisparities=16*nDipsFactor, blockSize=21)
         disparity = stereo.compute(self.imgLeft, self.imgRight)
-        plt. imshow(diparity, 'gray')
+        plt. imshow(disparity, 'gray')
         plt.show()
 
-    def computeDepthMapSGM(self):
+    def computeDepthMapSGBM(self):
         window_size = 7
         min_disp = 16
         nDispFactor = 14 #adjust this (14 is good)
@@ -51,19 +51,19 @@ class DepthMap:
         plt.show()
 
 
-    def demoViewPics():
-        dp = DepthMap(showImages=True)
+def demoViewPics():
+    dp = DepthMap(showImages=True)
 
-    def demoStereoBM():
-        dp = DepthMap(showImages=False)
-        dp.computeDepthMapBM()
+def demoStereoBM():
+    dp = DepthMap(showImages=False)
+    dp.computeDepthMapBM()
 
-    def demoStereoSGBM():
-        dp = DepthMap(showImages=False)
-        dp.computeDepthMapSGBM()
+def demoStereoSGBM():
+    dp = DepthMap(showImages=False)
+    dp.computeDepthMapSGBM()
     
-    if __name__ == "__main__":
-        demoViewPics()
-        # demoStereoBM()
-        # demoStereoSGBM()
+if __name__ == "__main__":
+    #demoViewPics()
+    #demoStereoBM()
+    demoStereoSGBM()
         
