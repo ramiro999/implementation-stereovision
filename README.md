@@ -1,6 +1,13 @@
-<p align="center">
-    <img src="Images/picture1.png" width="240" alt="bm_wls_image" /><br>
-</p>
-  
-  
-## Introduction
+## Create Virtual Environment
+
+```
+python3 -m venv myenv
+source myenv/bin/activate
+pip install -r requirements.txt
+```
+
+## Manual Install OpenCV Only
+
+```
+pip install opencv-python
+```
