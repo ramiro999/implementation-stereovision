@@ -1,5 +1,5 @@
-import numpy as np
 import cv2 as cv
+import numpy as np
 import matplotlib.pyplot as plt
 import os
 
@@ -63,7 +63,7 @@ def demoStereoSGBM():
     dp.computeDepthMapSGBM()
     
 if __name__ == "__main__":
-    #demoViewPics()
+    demoViewPics()
     #demoStereoBM()
-    demoStereoSGBM()
+    #demoStereoSGBM()
         

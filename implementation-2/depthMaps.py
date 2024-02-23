@@ -6,15 +6,15 @@ from matplotlib import pyplot as plt
 #left_image = cv.imread('tsukuba_l.png', cv.IMREAD_GRAYSCALE)
 #right_image = cv.imread('tsukuba_r.png', cv.IMREAD_GRAYSCALE)
 
-left_image = cv.imread('images/tsukuba/im0.ppm', cv.IMREAD_GRAYSCALE)
-right_image = cv.imread('images/tsukuba/im1.ppm', cv.IMREAD_GRAYSCALE)
+left_image = cv.imread('images/tsukuba/imL.png', cv.IMREAD_GRAYSCALE)
+right_image = cv.imread('images/tsukuba/imR.png', cv.IMREAD_GRAYSCALE)
 
 #left_image = cv.imread('items2_l.png', cv.IMREAD_GRAYSCALE)
 #right_image = cv.imread('items2_r.png', cv.IMREAD_GRAYSCALE)         
 
 
 
-stereo = cv.StereoBM_create(numDisparities=0, blockSize=21)
+stereo = cv.StereoBM_create(numDisparities=32, blockSize=21)
 # For each pixel algorithm will find the best disparity from 0
 # Larger block size implies smoother, though less accurate disparity map
 depth = stereo.compute(left_image, right_image)
