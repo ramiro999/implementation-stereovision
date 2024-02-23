@@ -1,4 +1,4 @@
-## Create Virtual Environment 
+## Create Virtual Environment
 
 ```
 python3 -m venv myenv
