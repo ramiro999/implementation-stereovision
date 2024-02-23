@@ -7,8 +7,8 @@ class DepthMap:
     def __init__(self, showImages):
         # Load the images
         root = os.getcwd()
-        imgLeftPath = os.path.join(root, 'Images/motorcycle/im0.png')
-        imgRightPath = os.path.join(root, 'Images/motorcycle/im1.png')
+        imgLeftPath = os.path.join(root, 'Images/Dataset-chess/imL.png')
+        imgRightPath = os.path.join(root, 'Images/Dataset-chess/imR.png')
         self.imgLeft = cv.imread(imgLeftPath, cv.IMREAD_GRAYSCALE)
         self.imgRight = cv.imread(imgRightPath, cv.IMREAD_GRAYSCALE)
 
