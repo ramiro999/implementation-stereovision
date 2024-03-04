@@ -1,0 +1,3 @@
+[submodule "other-implementation/StereoVisionDepthEstimation"]
+	path = other-implementation/StereoVisionDepthEstimation
+	url = https://github.com/niconielsen32/ComputerVision.git
