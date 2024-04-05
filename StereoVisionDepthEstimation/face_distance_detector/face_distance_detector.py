@@ -6,8 +6,8 @@ import imutils
 from matplotlib import pyplot as plt
 
 # Function for stereo vision and depth estimation
-import triangulation as tri
-import calibration
+import face_distance_detector.triangulation_detector as tri
+import calibration.calibration as calibration
 
 # Mediapipe for face detection
 import mediapipe as mp
@@ -110,7 +110,7 @@ with mp_facedetector.FaceDetection(min_detection_confidence=0.7) as face_detecti
 
             else:
                 # Function to calculate depth of object. Outputs vector of all depths in case of several balls.
-                # All formulas used to find depth is in video presentaion
+                # All formulas used to find depth is in video presentaion.
                 depth = tri.find_depth(center_point_right, center_point_left, frame_right, frame_left, B, f, alpha)
 
                 cv2.putText(frame_right, "Distance: " + str(round(depth,1)), (50,50), cv2.FONT_HERSHEY_SIMPLEX, 1.2, (0,255,0),3)

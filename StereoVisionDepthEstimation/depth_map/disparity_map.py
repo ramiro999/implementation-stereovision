@@ -3,8 +3,8 @@ import numpy as np
 import time
 
 # Function for stereo vision and depth estimation
-import triangulation as tri
-import calibration
+import face_distance_detector.triangulation_detector as tri
+import calibration.calibration as calibration
 
 # Open both cameras
 cap_right = cv2.VideoCapture(1)
