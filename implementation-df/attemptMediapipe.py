@@ -7,8 +7,8 @@ mp_face_mesh = mp.solutions.face_mesh
 drawing_spec = mp_drawing.DrawingSpec(thickness=1, circle_radius=1)
 
 # Initialize video capture for both cameras
-cap_right = cv2.VideoCapture(1)
-cap_left = cv2.VideoCapture(0)
+cap_right = cv2.VideoCapture(4)
+cap_left = cv2.VideoCapture(2)
 
 with mp_face_mesh.FaceMesh(min_detection_confidence=0.5, min_tracking_confidence=0.5) as face_mesh:
     while cap_right.isOpened() and cap_left.isOpened():

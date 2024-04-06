@@ -1,8 +1,8 @@
 import cv2
 
 # Inicializa la captura de video para la cámara con índice 0
-cap = cv2.VideoCapture(0)
-cap2 = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(4)
+cap2 = cv2.VideoCapture(2)
 
 num = 0
 

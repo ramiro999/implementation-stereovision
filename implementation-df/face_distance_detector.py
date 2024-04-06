@@ -6,8 +6,8 @@ import imutils
 from matplotlib import pyplot as plt
 
 # Function for stereo vision and depth estimation
-import face_distance_detector.triangulation_detector as tri
-import calibration.calibration as calibration
+import triangulation as tri
+import calibration as calibration
 
 # Mediapipe for face detection
 import mediapipe as mp
@@ -17,8 +17,8 @@ mp_facedetector = mp.solutions.face_detection
 mp_draw = mp.solutions.drawing_utils
 
 # Open both cameras
-cap_right = cv2.VideoCapture(1)                    
-cap_left =  cv2.VideoCapture(0)
+cap_right = cv2.VideoCapture(2)                    
+cap_left =  cv2.VideoCapture(4)
 
 
 # Stereo vision setup parameters
