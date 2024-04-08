@@ -17,15 +17,15 @@ mp_facedetector = mp.solutions.face_detection
 mp_draw = mp.solutions.drawing_utils
 
 # Open both cameras
-cap_right = cv2.VideoCapture(2)                    
-cap_left =  cv2.VideoCapture(4)
+cap_right = cv2.VideoCapture(4)                    
+cap_left =  cv2.VideoCapture(2)
 
 
 # Stereo vision setup parameters
 frame_rate = 120    #Camera frame rate (maximum at 120 fps)
-B = 11               #Distance between the cameras [cm]
+B = 12              #Distance between the cameras [cm]
 f = 3.67             #Camera lense's focal length [mm]
-alpha = 50       #Camera field of view in the horisontal plane [degrees]
+alpha = 70       #Camera field of view in the horisontal plane [degrees]
 
 
 

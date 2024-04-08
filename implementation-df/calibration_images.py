@@ -24,8 +24,10 @@ while True:
         key = cv2.waitKey(1)
         if key == ord('s'):
             # Guarda el fotograma actual
-            cv2.imwrite('images/stereoLeft/imageL' + str(num) + '.png', img)
-            cv2.imwrite('images/stereoRight/imageR' + str(num) + '.png', img2)
+            #cv2.imwrite('images/stereoLeft/imageL' + str(num) + '.png', img)
+            #cv2.imwrite('images/stereoRight/imageR' + str(num) + '.png', img2)
+            cv2.imwrite('images/testLeft/imageL' + str(num) + '.png', img)
+            cv2.imwrite('images/testRight/imageR' + str(num) + '.png', img2)
             print("Fotos guardadas")
             num += 1
         elif key == ord('q'):

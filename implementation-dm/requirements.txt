@@ -1,4 +1,0 @@
-opencv-python
-imutils
-matplotlib
-# pip instal mediapipe
